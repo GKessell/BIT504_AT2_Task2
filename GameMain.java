@@ -106,8 +106,8 @@ public class GameMain extends JPanel implements MouseListener {
         }
     }
 
-    /** Event handler for mouse click on the JPanel */
-    public void mouseClicked(MouseEvent e) {
+    /** Event handler for mouse press on the JPanel */
+    public void mousePressed(MouseEvent e) {
         int mouseX = e.getX();
         int mouseY = e.getY();
         int rowSelected = mouseY / CELL_SIZE;
@@ -128,9 +128,10 @@ public class GameMain extends JPanel implements MouseListener {
         repaint(); // Redraw the UI
     }
 
+    // Empty implementations of other MouseListener methods
     @Override
-    public void mousePressed(MouseEvent e) {
-        // Auto-generated, event not used
+    public void mouseClicked(MouseEvent e) {
+        // No longer needed
     }
 
     @Override
